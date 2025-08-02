@@ -1,7 +1,6 @@
 {
-    "name": "sparktro-laravel-modular",
+    "name": "sparktro/laravel-modular",
     "description": "A modular system for Laravel apps",
-    "version": "1.0.0",
     "license": "MIT",
     "type": "library",
     "authors": [
