@@ -1,14 +1,13 @@
 {
-    "name": "sparktro-laravel-modular",
+    "name": "mhannan-dev/sparktro-laravel-modular",
     "description": "A modular system for Laravel apps",
-    "version": "1.0.0",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
             "name": "Muhammad Hannan",
             "email": "mdhannan.info@gmail.com",
-            "homepage": "https://github.com/sparktro",
+            "homepage": "https://github.com/mhannan-dev/sparktro-laravel-modular",
             "role": "Developer"
         }
     ],
@@ -21,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sparktro\\LaravelModular\\LaravelModularServiceProvider"
+                "Sparktro\\LaravelModular\\SparkTroLaravelModularServiceProvider"
             ]
         }
     },
