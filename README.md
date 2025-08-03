@@ -1,8 +1,3 @@
-Here’s an updated and professional `README.md` file for your Laravel package **sparktro-laravel-modular**:
-
----
-
-````md
 # Sparktro Laravel Modular
 
 A clean and structured modular system for Laravel applications. This package helps you organize your Laravel app using a module-based architecture, making it more maintainable and scalable.
@@ -23,7 +18,7 @@ A clean and structured modular system for Laravel applications. This package hel
 
 ```bash
 composer require mhannan-dev/sparktro-laravel-modular
-````
+```
 
 If you're using a Laravel version with package auto-discovery, you're good to go.
 
@@ -55,13 +50,25 @@ Each module follows a structure like:
 
 ---
 
-## ✨ Usage
+## 🧾 Artisan Commands
 
-### Create a Module (Manually)
+You can use the following commands to generate module components easily:
 
-Create a folder inside `/modules` and follow the structure.
+| Command | Description |
+|--------|-------------|
+| `php artisan module:make ModuleName` | Create a new module |
+| `php artisan module:migrate ModuleName` | Run migrations for a specific module |
+| `php artisan module:make-request ModuleName RequestName` | Create a form request in the module |
+| `php artisan module:make-controller ModuleName ControllerName` | Create a controller inside the module |
+| `php artisan module:make-model ModuleName ModelName -m` | Create a model (and migration) inside the module |
+| `php artisan module:make-migration ModuleName MigrationName` | Create a new migration in the module |
 
-You can also publish a sample module starter (coming soon as artisan command).
+> Example:
+> ```bash
+> php artisan module:make SparkTro
+> php artisan module:make-controller SparkTro PageController
+> php artisan module:migrate SparkTro
+> ```
 
 ---
 
@@ -85,8 +92,8 @@ This package is open-source software licensed under the [MIT license](LICENSE).
 
 ## 👨‍💻 Author
 
-**Muhammad Hannan**
-[GitHub Profile](https://github.com/mhannan-dev)
+**Muhammad Hannan**  
+[GitHub Profile](https://github.com/mhannan-dev)  
 Email: [mdhannan.info@gmail.com](mailto:mdhannan.info@gmail.com)
 
 ---
@@ -96,8 +103,3 @@ Email: [mdhannan.info@gmail.com](mailto:mdhannan.info@gmail.com)
 Pull requests and contributions are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ---
-
-```
-
-Let me know if you want a section like **"How to create a module"** or an example controller/route setup.
-```
