@@ -24,24 +24,6 @@ If you're using a Laravel version with package auto-discovery, you're good to go
 
 ---
 
-## 🗂️ Folder Structure
-
-Each module follows a structure like:
-
-```
-/modules
-    /Blog
-        /Http
-            /Controllers
-        /Views
-        /Routes
-            web.php
-        /Database
-            /Migrations
-```
-
----
-
 ## 🧾 Artisan Commands
 
 You can use the following commands to generate module components easily:
