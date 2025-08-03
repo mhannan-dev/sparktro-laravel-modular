@@ -1,87 +1,106 @@
-# Sparktro Laravel Modular
-
-A clean and structured modular system for Laravel applications. This package helps you organize your Laravel app using a module-based architecture, making it more maintainable and scalable.
+Here’s an **updated and polished version** of your `README.md` for the **Sparktro Laravel Modular** package, ensuring better clarity, structure, and professionalism:
 
 ---
 
-## 🔧 Features
+# 🚀 Sparktro Laravel Modular
 
-- Easy to create and manage modules
-- Automatic loading of routes, views, migrations per module
-- PSR-4 autoloading support
-- Laravel auto-discovery supported
-- Ideal for large and enterprise Laravel apps
+A clean and scalable **modular system** for Laravel applications. This package provides a simple yet powerful way to structure your Laravel app using **module-based architecture**, making it easier to maintain and extend — ideal for large or enterprise-level applications.
 
 ---
 
-## 🚀 Installation
+## ✨ Features
+
+* 🧱 Modular code organization
+* ⚙️ Automatic loading of routes, views, migrations per module
+* 📦 PSR-4 autoloading and Laravel auto-discovery supported
+* 🧩 Artisan commands to scaffold modules and components
+* 🔐 Supports loading custom middleware like `auth`, etc.
+* 🏗️ Ideal for large, multi-team, enterprise Laravel apps
+
+---
+
+## 📦 Installation
 
 ```bash
 composer require mhannan-dev/sparktro-laravel-modular
 ```
 
-If you're using a Laravel version with package auto-discovery, you're good to go.
+> ✅ Laravel’s package auto-discovery will take care of registration.
 
 ---
 
+## ⚙️ Middleware Setup
 
-Load necessary auth or other middlware class in modules->providers class boot method 
+If your modules need to use `auth` or other middlewares, make sure to load them in each module's `Providers` class within the `boot()` method.
+
+```php
+public function boot()
+{
+    $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
+    $this->loadViewsFrom(__DIR__ . '/../Views', 'ModuleAlias');
+    $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+
+   \Illuminate\Support\Facades\Route::middleware(['web', 'auth'])
+            ->group(__DIR__ . '/../Routes/web.php');
+}
+```
 
 ---
 
+## 🧪 Artisan Commands
 
+The package includes several custom Artisan commands for quick scaffolding:
 
-## 🧾 Artisan Commands
+| Command                                                        | Description                               |
+| -------------------------------------------------------------- | ----------------------------------------- |
+| `php artisan module:make ModuleName`                           | Create a new module                       |
+| `php artisan module:migrate ModuleName`                        | Run migrations for a specific module      |
+| `php artisan module:make-controller ModuleName ControllerName` | Create a controller inside the module     |
+| `php artisan module:make-model ModuleName ModelName -m`        | Create a model and optional migration     |
+| `php artisan module:make-request ModuleName RequestName`       | Create a form request in the module       |
+| `php artisan module:make-migration ModuleName MigrationName`   | Create a new migration file in the module |
 
-You can use the following commands to generate module components easily:
-
-| Command | Description |
-|--------|-------------|
-| `php artisan module:make ModuleName` | Create a new module |
-| `php artisan module:migrate ModuleName` | Run migrations for a specific module |
-| `php artisan module:make-request ModuleName RequestName` | Create a form request in the module |
-| `php artisan module:make-controller ModuleName ControllerName` | Create a controller inside the module |
-| `php artisan module:make-model ModuleName ModelName -m` | Create a model (and migration) inside the module |
-| `php artisan module:make-migration ModuleName MigrationName` | Create a new migration in the module |
-
-> Example:
+> Example usage:
+>
 > ```bash
-> php artisan module:make SparkTro
-> php artisan module:make-controller SparkTro PageController
-> php artisan module:migrate SparkTro
+> php artisan module:make Blog
+> php artisan module:make-controller Blog PostController
+> php artisan module:migrate Blog
 > ```
 
 ---
 
-## 📂 Autoloading
+## 📂 PSR-4 Autoloading
 
-The package uses PSR-4 autoloading. Make sure your module namespaces are correct.
+Each module follows **PSR-4 autoloading** standards. No need for manual inclusion—just ensure your namespaces match directory structures.
 
 ---
 
 ## 🧪 Testing
 
-> Coming soon: Automated tests and example module.
+Automated tests and example module usage will be added in upcoming releases.
 
 ---
 
 ## 📝 License
 
-This package is open-source software licensed under the [MIT license](LICENSE).
+This package is open-sourced under the [MIT license](LICENSE).
 
 ---
 
 ## 👨‍💻 Author
 
-**Muhammad Hannan**  
-[GitHub Profile](https://github.com/mhannan-dev)  
-[Linkedin Profile](https://www.linkedin.com/in/mhannan44)  
-Email: [mdhannan.info@gmail.com](mailto:mdhannan.info@gmail.com)
+**Muhammad Hannan**
+[GitHub](https://github.com/mhannan-dev) | [LinkedIn](https://www.linkedin.com/in/mhannan44)
+📧 [mdhannan.info@gmail.com](mailto:mdhannan.info@gmail.com)
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests and contributions are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Contributions, issues, and feature requests are welcome!
+Please open a discussion or issue first for major changes.
 
 ---
+
+Would you like a sample demo module created to include in the repo? I can help generate that too.
