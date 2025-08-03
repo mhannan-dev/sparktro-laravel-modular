@@ -24,6 +24,13 @@ If you're using a Laravel version with package auto-discovery, you're good to go
 
 ---
 
+
+Load necessary auth or other middlware class in modules->providers class boot method 
+
+---
+
+
+
 ## 🧾 Artisan Commands
 
 You can use the following commands to generate module components easily:
