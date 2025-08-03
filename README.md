@@ -22,14 +22,6 @@ composer require mhannan-dev/sparktro-laravel-modular
 
 If you're using a Laravel version with package auto-discovery, you're good to go.
 
-Otherwise, you can manually add the service provider in your `config/app.php`:
-
-```php
-'providers' => [
-    Sparktro\LaravelModular\SparkTroLaravelModularServiceProvider::class,
-],
-```
-
 ---
 
 ## 🗂️ Folder Structure
