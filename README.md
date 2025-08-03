@@ -94,6 +94,7 @@ This package is open-source software licensed under the [MIT license](LICENSE).
 
 **Muhammad Hannan**  
 [GitHub Profile](https://github.com/mhannan-dev)  
+[Linkedin Profile](https://www.linkedin.com/in/mhannan44)  
 Email: [mdhannan.info@gmail.com](mailto:mdhannan.info@gmail.com)
 
 ---
